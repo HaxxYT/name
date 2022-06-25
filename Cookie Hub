@@ -1,0 +1,62 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Cookie Hub ", "Synapse")
+ 
+ -- MAIN
+ local Main = Window:NewTab("Main")
+ local MainSection = Main:NewSection("Main")
+ 
+ -- PLAYER
+ local Player = Window:NewTab("Player")
+ local PlayerSection = Player:NewSection("Player")
+ 
+PlayerSection:NewButton("Infinite Yeild", "Gives You Admin", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/tzTXmYf2'),true))()
+end)
+ 
+ PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+ end)
+ 
+ PlayerSection:NewToggle("Toggle Speed", "Toggles using jump power.", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.Walkspeed = true
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = false
+    end
+end)
+ 
+ PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+ end)
+ 
+ PlayerSection:NewToggle("Toggle Jump", "Toggles using jump power.", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+    else
+        game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = false
+    end
+end)
+ 
+ -- Games
+ local Games = Window:NewTab("Games")
+ local GamesSection = Games:NewSection("Games")
+ 
+ GamesSection:NewButton("The Mystic Diaries", "Loads Mystic Diary UI", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/TheMysticDiaries'),true))()
+end)
+
+GamesSection:NewButton("Da Hood Faded", "Faded", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
+end)
+
+GamesSection:NewButton("Hoopz KEY = LegendHoopz", "Hoopz", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/hoopzop/main/hoopz20"))()
+end)
+
+GamesSection:NewButton("More Coming Soon", "WHAT IT DO", function()
+    -- SCRIPT HERE
+end)
+
+-- Settings
+ local Settings = Window:NewTab("Credits")
+ local SettingsSection = Settings:NewSection("Created by tyresestampycat123")
